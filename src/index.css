@@ -1,13 +1,89 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('paws.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.flex{
+  display: flex;
+}
+
+.center{
+  align-items: center;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.navbar{
+  width: 100%;
+  height: 12vh;
+  background-color: #fcfbff;
+}
+.logo{
+  margin-left: 7vw;
+}
+
+.grow{
+  flex-grow: 1;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.links{
+  flex-grow: 2;
+  justify-content: space-evenly;
+}
+
+.links div{
+  color: #122225;
+  cursor:pointer;
+  box-sizing: border-box;
+  padding-bottom: 2px;
+}
+
+.links div::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent 30%, #3e747e 30%, #3e747e 70%, transparent 70%);
+}
+
+.links div:hover{
+  border-bottom: 1px solid #3e747e;
+}
+
+.button{
+  margin-right: 6vw;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background-color: #3e747e;
+  color: #fcfbff;
+  font-size: 16px;
+  border-radius: 25px;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid #3e747e;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #fcfbff;
+  color: #3e747e;
 }
