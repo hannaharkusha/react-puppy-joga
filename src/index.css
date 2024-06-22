@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+html{
+  background-color: #465052;
+}
+
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('paws.jpg');
@@ -11,6 +14,8 @@ body {
   font-family: "Roboto Mono", cursive;
   font-size: 18px;
   overflow-x: hidden;
+  margin: 0;
+  background-color: white;
 }
 
 
@@ -28,8 +33,6 @@ body {
   background: #bdbaba;
 }
 
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -45,6 +48,10 @@ code {
 
 .space-between{
   justify-content: space-between;
+}
+
+.reverse{
+  flex-flow: row-reverse;
 }
 
 .navbar{
@@ -106,8 +113,7 @@ code {
 
 .button{
   margin-right: 10vw;
-  padding: 10px 70px;
-  text-transform: uppercase;
+  padding: 10px 40px;
   letter-spacing: 0.09em;
   background-color: #485254;
   color: #fcfbff;
@@ -135,7 +141,8 @@ code {
 
 
 .headline span {
-  color: #ba807f;
+  color: #a4615f;
+
 }
 
 .header {
@@ -174,3 +181,86 @@ code {
   opacity: 1;
 }
 
+.about{
+  width: 90%;
+  margin: 10vh auto;
+  border-left: 2px solid #966563;
+  padding: 25px;
+}
+
+.question{
+  font-size: 32px; /* Adjust size to match the image */
+  font-weight: bold;
+  color: #726285; /* Orange color */
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
+.content{
+  width: 100%;
+  margin: auto;
+  text-align: justify;
+}
+
+.advantages{
+  margin: 5vh 0;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.advantage{
+  width: 50vw;
+  background-color: #dedbe2;
+  margin-bottom: 6vh;
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 2vh;
+  min-height: 4vh;
+  font-weight: bold;
+}
+
+.adv-text{
+  text-align: justify;
+}
+
+.footer{
+  background-color: #475153;
+  padding: 4vh 0;
+  justify-content: space-evenly;
+  color: #fcfbff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.footer p{
+  margin-bottom: 0;
+  margin-top: 3px;
+}
+
+.footer-title{
+  color: #bdbaba;
+  margin-bottom: 1vh;
+}
+
+.terms{
+  margin-bottom: 10vh;
+}
+
+.terms ul{
+  width: 40%;
+  margin-left: 5vw;
+  border-left: 2px solid #966563;
+}
+
+li{
+  text-align: justify;
+  margin-bottom: 4vh;
+}
+
+.terms img{
+  width: 40%;
+  height: auto;
+  border-radius: 30px 0 0 30px;
+}
