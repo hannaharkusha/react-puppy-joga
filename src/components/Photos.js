@@ -1,36 +1,72 @@
-import React from "react";
-import dog1 from './dog1.jpg';
+import React, {useEffect, useState} from "react";
 import dog2 from './dog2.jpg';
 import dog3 from './dog3.jpg';
 import dog4 from './dog4.jpg';
 import dog5 from './dog5.jpg';
 import dog6 from './dog6.jpg';
-import dog7 from './dog7.jpg';
 import dog8 from './dog8.jpg';
-// import dog9 from './dog9.jpg';
-// import dog10 from './dog10.jpg';
 
-function Photos() {
+
+function Photos({ setLoading }) {
+    const imagesToLoad = [
+        dog2,
+        dog3,
+        dog4,
+        dog5,
+        dog6,
+        dog8
+    ];
+
+    const [loadedImages, setLoadedImages] = useState([]);
+
+    const preloadImages = (src) => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => resolve(src);
+            img.onerror = reject;
+        });
+    };
+
+    useEffect(() => {
+        const loadImages = async () => {
+            try {
+                const loaded = await Promise.all(imagesToLoad.map(src => preloadImages(src)));
+                setLoadedImages(loaded);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error loading images:', error);
+                setLoading(false);
+            }
+        };
+
+        loadImages();
+    }, [imagesToLoad, setLoading]);
+
     return (
         <div className='flex photos center'>
-            <div className='photo'>
-                <img src={dog5} alt="dog1"/>
-            </div>
-            <div className='photo flex column'>
-                <img src={dog4} alt="dog1"/>
-            </div>
-            <div className='photo'>
-                <img src={dog2} alt="dog1"/>
-                <img src={dog6} alt="dog1"/>
-
-            </div>
-            <div className='photo flex column'>
-                <img src={dog8} alt="dog2"/>
-
-            </div>
-            <div className='photo'>
-                <img src={dog3} alt="dog2"/>
-            </div>
+            {loadedImages.length > 0 ? (
+                <>
+                    <div className='photo'>
+                        <img src={loadedImages[3]} alt="dog5" />
+                    </div>
+                    <div className='photo flex column'>
+                        <img src={loadedImages[2]} alt="dog4" />
+                    </div>
+                    <div className='photo'>
+                        <img src={loadedImages[0]} alt="dog2" />
+                        <img src={loadedImages[4]} alt="dog6" />
+                    </div>
+                    <div className='photo flex column'>
+                        <img src={loadedImages[5]} alt="dog8" />
+                    </div>
+                    <div className='photo'>
+                        <img src={loadedImages[1]} alt="dog3" />
+                    </div>
+                </>
+            ) : (
+                <div>Loading images...</div>
+            )}
         </div>
     );
 }
