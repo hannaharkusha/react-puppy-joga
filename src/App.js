@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Photos from "./components/Photos";
@@ -22,6 +22,12 @@ function App() {
     const [isLoading, setLoading] = useState(true);
 
     const data = { advantages };
+
+    useEffect(() => {
+        setTimeout(()=>{
+            setLoading(false)
+        }, 3000)
+    }, []);
 
     return (
         <DataContext.Provider value={data}>

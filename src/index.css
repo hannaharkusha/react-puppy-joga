@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-html{
-  background-color: #465052;
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,6 +13,11 @@ body {
   background-color: white;
 }
 
+.loading{
+  width: 100%;
+  height: 100vw;
+  text-align: center;
+}
 
 ::-webkit-scrollbar {
   width: 6px;
