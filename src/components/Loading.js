@@ -3,7 +3,7 @@ import ReactLoading from "react-loading";
 
 export default function Loading() {
     return (
-        <div className='loading'>
+        <div className='loading flex column center'>
             <div>Loading</div>
             <ReactLoading
                 type="spinningBubbles"
