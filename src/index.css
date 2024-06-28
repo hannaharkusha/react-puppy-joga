@@ -14,6 +14,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: white;
+  position: relative;
 }
 
 .loading{
@@ -127,23 +128,22 @@ code {
 
 
 .button{
-  margin-right: 10vw;
-  margin-top: 3vh;
-  padding: 12px 90px;
-  letter-spacing: 0.09em;
-  background-color: #73afe0;
-  color: #1a1f38;
+  margin: 0 auto;
+  padding: 12px 70px;
+  letter-spacing: 0.1em;
+  background-color: #262626;
+  color: #fcfbff;
   font-size: 20px;
-  border-radius: 20px;
-  border: 2px solid #bacef5;
+  border-radius: 5px;
+  border: 2px solid #262626;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .button:hover{
   background-color: #fcfbff;
-  color: #1a1f38;
+  color: #262626;
 }
 
 .headline {
@@ -157,7 +157,7 @@ code {
 
 .subheadline{
   font-size: 18px;
-  color: #687185;
+  color: #3d3e41;
 }
 
 span{
@@ -201,8 +201,8 @@ span{
 
 .about{
   width: 80%;
-  margin: 10vh auto;
-  border-left: 2px solid #7f95be;
+  margin: 10vh auto 15vh auto;
+  border-left: 2px solid #363636;
   padding: 25px;
 }
 
@@ -227,7 +227,7 @@ span{
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 16px;
-  background-color: #eed6de;
+  background-color: #f1ecde;
 }
 
 .advantages div{
@@ -259,7 +259,7 @@ span{
   font-size: 20px;
   font-weight: bold;
   margin-top: -6vh;
-  background-color: #eed6de;
+  background-color: #f1ecde;
   padding: 16px 3px;
   width: fit-content;
   align-self: flex-start;
@@ -275,7 +275,7 @@ span{
   background-color: #262626;
   padding: 4vh 0;
   justify-content: space-evenly;
-  color: #eadfe3;
+  color: white;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
@@ -309,4 +309,29 @@ li{
   width: 40%;
   height: auto;
   border-radius: 30px 0 0 30px;
+}
+
+
+.book{
+  width: 76%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(38, 37, 37, 0.6);
+  position: absolute;
+  top: 78vh;
+  border-radius: 5px;
+  margin: 0 calc(12% - 30px);
+}
+
+
+select{
+  width: 25%;
+  padding: 14px;
+  margin-left: 2vw;
+  border-radius: 5px;
+  border: 1px solid rgba(38, 38, 38, 0.6);
+}
+
+select:first-of-type{
+  width: 45%;
 }

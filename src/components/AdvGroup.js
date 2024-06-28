@@ -7,13 +7,17 @@ function AdvGroup() {
 
     return (
         <div className='flex center advantages'>
-            <div className='adv-question'>Why should I go?</div>
             {advantages.map((adv, index) => (
-               <div><Advantage
-                    key={index}  // Add a key prop for each element
-                    title={adv[0]}
-                    advantage={adv[1]}
-               /></div>
+                <>
+                    <div>
+
+                    </div>
+                   <div><Advantage
+                        key={index}  // Add a key prop for each element
+                        title={adv[0]}
+                        advantage={adv[1]}
+                   /></div>
+                </>
             ))}
         </div>
     );
