@@ -1,26 +1,25 @@
 import React, { useContext } from "react";
-import Advantage from "./Advantage";
 import { DataContext } from '../App';  // Import the context from App
 
 function AdvGroup() {
     const { advantages } = useContext(DataContext);  // Use the context
 
     return (
-        <div className='flex center advantages'>
+        <div className='flex column advantages'>
+            <div className='adv-title'>Pawsitive effects</div>
             {advantages.map((adv, index) => (
-                <>
-                    <div>
-
+                <div className=" adv-container flex center glass">
+                    <img src={adv[2]} alt="icon"/>
+                    <div className='advantage grow' key={index}>
+                        <div>{adv[0]}</div>
+                        <div>{adv[1]}</div>
                     </div>
-                   <div><Advantage
-                        key={index}  // Add a key prop for each element
-                        title={adv[0]}
-                        advantage={adv[1]}
-                   /></div>
-                </>
-            ))}
-        </div>
-    );
+                </div>
+    )
+)}
+</div>
+)
+    ;
 }
 
 export default AdvGroup;

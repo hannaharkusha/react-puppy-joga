@@ -8,14 +8,18 @@ import Loading from "./components/Loading";
 import BookDiv from "./components/BookDiv";
 import TicketsDiv from "./components/TicketsDiv";
 
+import stressRelief from './components/stress-relief.png';
+import yoga from './components/yoga.png';
+import pet from './components/pet.png';
+
 // Create the context
 const DataContext = createContext();
 
 function App() {
     const advantages = [
-        ["Stress Relief", "Interacting with puppies is known to reduce stress levels."],
-        ["Enhanced Yoga Experience", "The presence of puppies can make yoga sessions more enjoyable and engaging, encouraging participants to look forward to their practice."],
-        ["Support for Shelters", "Many puppy yoga sessions are organized in collaboration with animal shelters or rescue organizations."],
+        ["Stress Relief", "Interacting with puppies is known to reduce stress levels.",stressRelief],
+        ["Enhanced Yoga Experience", "The presence of puppies can make yoga sessions more enjoyable and engaging, encouraging participants to look forward to their practice.", yoga],
+        ["Support for Shelters", "Many puppy yoga sessions are organized in collaboration with animal shelters or rescue organizations.", pet],
     ];
 
     const options = [

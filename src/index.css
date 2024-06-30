@@ -204,10 +204,11 @@ span{
 }
 
 .about{
-  width: 80%;
-  margin: 10vh auto 15vh auto;
+  width: 90%;
+  margin: 0 auto;
   border-left: 2px solid #363636;
-  padding: 25px;
+  padding: 10px 30px;
+  box-sizing: border-box;
 }
 
 .question{
@@ -225,61 +226,25 @@ span{
 }
 
 .advantages{
-  margin: 5vh auto;
+  margin: 10vh auto;
+  padding: 30px;
   width: 90%;
-  padding: 1% 5%;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 16px;
-  background-color: #f1ecde;
 }
 
-.advantages div{
-  flex: 0 1 calc(33.333% - 16px);
-  box-sizing: border-box;
-}
 
-.adv-question{
-  text-align: center;
+.adv-title{
   font-size: 32px;
-  font-weight: bold;
-  color: #262626;
-
-}
-
-.advantage{
-  width: 25vw;
-  height: 30vh;
-  border: 4px solid #262626;
-  margin: 6vh auto;
-  padding: 15px;
-  border-radius: 5px;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.title{
-  min-height: 3vh;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: -6vh;
-  background-color: #f1ecde;
-  padding: 16px 3px;
-  width: fit-content;
-  align-self: flex-start;
-}
-
-.adv-text{
-  text-align: justify;
-  padding: 0 20px;
-  margin: auto;
+  font-weight: 600;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  margin-bottom: 6vh;
 }
 
 .footer{
-  background-color: #262626;
+  background-color: #eae7de;
   padding: 4vh 0;
   justify-content: space-evenly;
-  color: white;
+  color: #1f243f;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
@@ -290,31 +255,10 @@ span{
 }
 
 .footer-title{
-  color: #bdbaba;
+  color: #3d3e40;
   margin-bottom: 1vh;
+  font-weight: 700;
 }
-
-.terms{
-  margin-bottom: 10vh;
-}
-
-.terms ul{
-  width: 40%;
-  margin-left: 5vw;
-  border-left: 2px solid #966563;
-}
-
-li{
-  text-align: justify;
-  margin-bottom: 4vh;
-}
-
-.terms img{
-  width: 40%;
-  height: auto;
-  border-radius: 30px 0 0 30px;
-}
-
 
 .book{
   width: 60%;
@@ -387,7 +331,7 @@ li{
 .tickets-overlay{
   width: 80%;
   margin: 10vh auto;
-  justify-content: flex-end;
+  justify-content: flex-start;
   background-image: url('puppies.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -402,6 +346,49 @@ li{
   margin: 5vh 6vw;
   box-shadow: none;
   border-radius: 40px;
+}
+
+.about-overlay{
+  width: 65%;
+  padding: 40px;
+  margin: 10vh auto;
+  background-color: rgba(236, 233, 224, 0.3
+  );
+}
+
+.advantage{
+  margin: 20px 0 20px 40px;
+  border-left: 1px solid rgba(0, 0, 0, 0.35);
+  padding-left: 40px;
+}
+
+.adv-container{
+  background-color: rgba(189, 207, 245, 0.65);
+  width: 60%;
+  margin: 2vh;
+  padding: 0 2vw;
+}
+
+.advantage img{
+  padding-right: 30px;
+}
+
+
+.advantage>div:first-child{
+  font-weight: 700;
+  margin-bottom: 1vh;
+}
+
+.footer-logo{
+  padding: 20px 50px;
+  text-align: left;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(36, 45, 96, 0.8);
+  font-weight: bold;
+  font-size: 24px;
+  color: #1a1f38;
+  font-family: Montserrat, sans-serif;
+  width: 100%;
 }
 
 
