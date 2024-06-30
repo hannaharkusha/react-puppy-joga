@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import AdvGroup from "./components/AdvGroup";
 import Loading from "./components/Loading";
 import BookDiv from "./components/BookDiv";
+import TicketsDiv from "./components/TicketsDiv";
 
 // Create the context
 const DataContext = createContext();
@@ -36,6 +37,7 @@ function App() {
                         reverse={false}
                     />
                     <AdvGroup />
+                    <TicketsDiv />
                     <Footer />
                 </div>
         </DataContext.Provider>

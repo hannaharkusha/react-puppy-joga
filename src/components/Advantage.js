@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 function Advantage({title, advantage, margin}) {
     return (
         <div className='flex column advantage' >

@@ -6,17 +6,18 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 function Dropdown({options}) {
 
     const[dropdownToggled, setDropdownToggled] = useState(false)
+    const[choosedOption, setChoosedOption] = useState('')
 
     return (
         <div className={dropdownToggled ? 'flex column glass dropdown' : 'flex column glass  dropdown not-toggled'} onClick={()=>setDropdownToggled(!dropdownToggled)}>
             <div className="flex center space-between">
-                <div className="dropdown-title"> Choose event</div>
+                <div className="dropdown-title">{choosedOption ? choosedOption : 'Choose event'}</div>
                 <FontAwesomeIcon icon={faCaretDown} />
             </div>
             {dropdownToggled &&
                 (<div className="dropdown-options glass">
                 {options.map(option => (
-                    <div>{option}</div>
+                    <div onClick={()=>setChoosedOption(option)}>{option}</div>
                 ))}
                 </div>)
             }
