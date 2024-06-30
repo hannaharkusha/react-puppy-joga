@@ -1,10 +1,10 @@
 import React from "react";
+import Dropdown from "./Dropdown";
 
-function BookDiv() {
+function BookDiv({options}) {
     return (
-        <div className='flex center book'>
-            <select name="event" id="event"></select>
-            <select name="date" id="date"></select>
+        <div className='flex glass space-evenly center book'>
+          <Dropdown options={options} />
             <button className='button'>Confirm</button>
         </div>
     )

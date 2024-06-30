@@ -17,6 +17,10 @@ function App() {
         ["Support for Shelters", "Many puppy yoga sessions are organized in collaboration with animal shelters or rescue organizations."],
     ];
 
+    const options = [
+        'option1', 'option2', 'option3'
+    ]
+
 
     const data = { advantages };
 
@@ -25,7 +29,7 @@ function App() {
                 <div className="App">
                     <Navbar />
                     <Header />
-                    <BookDiv />
+                    <BookDiv options={options}/>
                     <Section
                         question='What is Puppy Yoga?'
                         content="Puppy yoga is a delightful and unique experience that combines traditional yoga practices with the joy of interacting with playful puppies. During a typical class, participants engage in a series of yoga poses and stretches, all while adorable puppies roam freely around the room. These furry companions might curl up next to yogis, play with each other, or even join in on the poses. The presence of puppies adds an element of fun and relaxation, making the practice more enjoyable and less intense."
