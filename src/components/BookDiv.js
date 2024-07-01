@@ -5,7 +5,7 @@ function BookDiv({options}) {
     return (
         <div className='flex glass space-evenly center book'>
           <Dropdown options={options} />
-            <button className='button'>Confirm</button>
+            <button className='button'>Buy Tickets</button>
         </div>
     )
 }

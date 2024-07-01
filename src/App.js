@@ -32,8 +32,10 @@ function App() {
     return (
         <DataContext.Provider value={data}>
                 <div className="App">
-                    <Navbar />
-                    <Header />
+                    <div className='image'>
+                        <Navbar />
+                        <Header />
+                    </div>
                     <BookDiv options={options}/>
                     <Section
                         question='What is Puppy Yoga?'
